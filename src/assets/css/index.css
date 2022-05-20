@@ -1,0 +1,131 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  
+  background-image: linear-gradient(0deg, rgb(0 0 0 / 65%), rgb(127 127 127 / 50%)), url(../images/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 500px; 
+  background-color: #FFF;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgb(127 127 127 / 80%);
+} 
+
+.card > .card--header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 50px 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid;
+}
+
+.card > .card--header > h1 {
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+.card > .card--header > h1 > span {
+  font-weight: bold;
+  color: #009edd;
+}
+
+.card > .card--body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px 15px;
+}
+
+.card > .card--body > .body--row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.card > .card--body > .body--row > .row--column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#search {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: all ease 0.3s;
+}
+
+#search:hover {
+  border-color: #656464;
+}
+
+#search > input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+#search > button {
+  width: 20%;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  color: #b3b3b3;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+#search > button:hover,
+#search > button:focus {
+  color: #868686;
+}
+
+#search > button:active {
+  background-color: #139cdd;
+  color: #FFF;
+}
+
+#search + div > p {
+  display: none;
+  transition: all ease 0.3s;
+}
+
+.error#search {
+  border-color: #FF0000;
+  margin-bottom: 5px;
+}
+
+.error#search + div > p {
+  display: block;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #f32a2a;
+  margin-bottom: 10px;
+}
+
+.body--row.fields {
+  margin: 10px 0;
+}
+
+.body--row.fields > .row--column > p {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #656464;
+}
